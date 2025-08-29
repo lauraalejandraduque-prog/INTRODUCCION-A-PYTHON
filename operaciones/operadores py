@@ -1,0 +1,73 @@
+'''
+Operadores matemáticos
+suma
+resta
+división
+multiplicación
+potencia
+floor division
+modulo
+'''
+
+x=2
+y=5
+print(x+y)
+w=2.5
+print(type(x), type(y))
+z= x +w
+print(z, type (z))
+
+#operador resta
+a=10
+b=15
+c=b-a
+print("el resultado de la esta es: ",c, type (c))
+
+
+#operador división
+d=12
+f=4
+print(d/f, type(d/f))
+
+#operador multiplicación
+a=50
+print(2*a)
+
+#operador potencia
+y=a**f
+print(f"el número {a} elevado a la variable f {f} es {y}")
+
+
+#división piso
+m=50
+n=3
+print(m//n)
+
+#división piso vs división tradi
+l=8
+s=-3
+print(l//s)
+
+d=8
+f=-3
+print(d/f, type(d/f))
+
+#modulo (%)
+g=10
+h=3
+print(g%h)
+
+#operadores de comparación
+
+# es igual a 
+print(2==2)
+print(2==2.0)
+
+#es diferente
+print("univalle"!="Univalle")
+
+x = 4.123456789000001058946546 
+y = 4.123456789000001 
+print("la variable x es igual a la variable y?:", x==y)
+
+
