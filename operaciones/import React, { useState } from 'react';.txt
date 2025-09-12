@@ -1,0 +1,44 @@
+import React, { useState } from 'react';
+
+const hotspots = [
+  { id: 1, x: '30%', y: '40%', mensaje: 'Cable suelto en el suelo: riesgo de tropiezo.' },
+  { id: 2, x: '65%', y: '55%', mensaje: 'Caja mal apilada: posible caída de objetos.' },
+  { id: 3, x: '20%', y: '70%', mensaje: 'Trabajador sin casco en zona de riesgo.' }
+];
+
+export default function Mision1() {
+  const [puntos, setPuntos] = useState(0);
+  const [mensaje, setMensaje] = useState('');
+
+  const handleHotspotClick = (msg) => {
+    setPuntos(puntos + 1);
+    setMensaje(msg);
+    setTimeout(() => setMensaje(''), 3000);
+  };
+
+  return (
+    <div className="relative w-full max-w-3xl mx-auto mt-8">
+      <h2 className="text-xl font-bold mb-4">Misión 1: Identifica los peligros en la imagen</h2>
+      <div className="relative">
+        <img
+          src="/obra.jpg" // Asegúrate de que esta imagen esté en la carpeta /public
+          alt="Entorno de trabajo"
+          className="w-full border rounded"
+        />
+        {hotspots.map((spot) => (
+          <button
+            key={spot.id}
+            className="absolute bg-red-500 opacity-0 hover:opacity-50 rounded-full w-6 h-6"
+            style={{ left: spot.x, top: spot.y }}
+            onClick={() => handleHotspotClick(spot.mensaje)}
+          />
+        ))}
+      </div>
+      <div className="mt-4">
+        <p className="font-semibold">Puntos: {puntos}</p>
+        {mensaje && <div className="mt-2 p-2 bg-green-100 border border-green-400 rounded">{mensaje}</div>}
+      </div>
+    </div>
+  );
+}
+
