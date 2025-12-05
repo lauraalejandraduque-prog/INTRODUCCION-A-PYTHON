@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Aplicación Python bauxita</title>
+    </head>
+<body>
+    <header>
+        <h1>Bienvenido al Ejercicio de la Bauxita</h1>
+    </header>
+   
+        <h3>Esta es la página principal de la aplicación. A continuación se presenta los resultados del modelo.</h3>
+
+            <li>El valor de la función objetivo es: {{funcion_objetivo}}</li>
+            <li> </li>
+            <li>Si se abre la planta el valor es 1 sino 0</li>
+            <li> </li>
+            <li>Planta B: {{dato1}}</li>
+            <li>Planta C: {{dato2}}</li>
+            <li>Planta D: {{dato3}}</li>
+            <li>Planta E: {{dato4}}</li>
+</body>
+</html>

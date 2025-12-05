@@ -85,3 +85,4 @@ match x:
         print("x es 8")
     case _:
         print(f"Caso por defecto x es este valor {x} ")
+
